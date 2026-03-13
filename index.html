@@ -1,586 +1,1105 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Biznes SMM | Savmedia premium kursi</title>
-    <meta name="description" content="40 kunlik Biznes SMM premium kursi — Instagramda biznesni noldan natijagacha rivojlantiring. 500 000 so'm chegirma. Ro'yxatdan o'ting.">
-    
+    <meta name="description"
+        content="40 kunlik Biznes SMM premium kursi — Instagramda biznesni noldan natijagacha rivojlantiring. 500 000 so'm chegirma. Ro'yxatdan o'ting.">
+
     <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- Иконки Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <style>
-        /* ================= ПЕРЕМЕННЫЕ (PREMIUM LIGHT THEME) ================= */
+        /* ================= ПЕРЕМЕННЫЕ ДЛЯ НОВЫХ БЛОКОВ (DARK/GOLD THEME) ================= */
         :root {
-            --bg-body: #F8FAFC;         
-            --bg-card: #FFFFFF;
-            --primary: #2563EB;         
-            --primary-hover: #1D4ED8;
-            --accent-gold: #F59E0B;     
-            --text-dark: #0F172A;
-            --text-gray: #64748B;
-            --border-light: #E2E8F0;
-            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-            --shadow-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
+            --bg-body: #07070A;
+            --bg-card: #121216;
+            --primary: #F59E0B;
+            --primary-hover: #D97706;
+            --accent-gold: #FDE68A;
+            --text-dark: #FFFFFF;
+            --text-gray: #A1A1AA;
+            --border-light: rgba(248, 209, 116, 0.2);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 1);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-body);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
-            background-attachment: fixed;
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ================= MARQUEE (БЕГУЩАЯ СТРОКА) ================= */
+        /* ================= MARQUEE (БЕГУЩАЯ СТРОКА) - ОСТАВЛЕНО БЕЗ ИЗМЕНЕНИЙ ================= */
         .marquee-container {
-            background: linear-gradient(90deg, #1E40AF, var(--primary));
+            width: 100%; z-index: 100;
+            background: linear-gradient(90deg, #451A03, #78350F, #451A03);
             color: white; padding: 12px 0; overflow: hidden; white-space: nowrap; 
             font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+            border-bottom: 1px solid var(--border-light);
         }
         .marquee { display: inline-flex; animation: marquee 25s linear infinite; }
         .marquee-inner { padding-right: 50px; }
-        .marquee i { color: #FCD34D; margin: 0 5px; font-size: 16px; vertical-align: middle; }
+        .marquee i { color: var(--accent-gold); margin: 0 5px; font-size: 16px; vertical-align: middle; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* ================= ШАПКА ================= */
-        header {
-            position: sticky; top: 0; z-index: 100;
-            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-light); padding: 15px 20px;
-            display: flex; justify-content: space-between; align-items: center;
+        /* ================= БЛОК 1: ПРЕМИУМ ДИЗАЙН (MAX ПРОКАЧКА) - ОСТАВЛЕНО БЕЗ ИЗМЕНЕНИЙ ================= */
+        .hero-master {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #07070A;
+            background-image: url('images/bg-desktop.png');
+            /* ФОН ДЛЯ ПК */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        .logo { font-size: 24px; font-weight: 900; letter-spacing: -0.5px; color: var(--text-dark); }
-        .logo span { color: var(--primary); }
-        .btn-small {
-            background: var(--bg-card); border: 2px solid var(--border-light); color: var(--text-dark);
-            padding: 10px 24px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: var(--transition);
-        }
-        .btn-small:hover { border-color: var(--primary); color: var(--primary); background: #EFF6FF; }
 
-        /* ================= БЛОК 1: HERO (NEW STRUCTURE FOR PERFECT MOBILE) ================= */
-        .hero { 
-            padding: 50px 20px 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-                "text image"
-                "action image";
-            gap: 0 50px;
-            min-height: 85vh;
+        .hero-glow {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            z-index: 1;
+            pointer-events: none;
         }
-        
-        .hero-text-wrap { grid-area: text; align-self: flex-end; padding-top: 40px; }
-        .hero-action-wrap { grid-area: action; align-self: flex-start; padding-bottom: 40px; }
-        
-        .hero-image { grid-area: image; position: relative; display: flex; justify-content: center; align-items: flex-end; align-self: flex-end; }
-        .hero-image::before {
-            content: ''; position: absolute; width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%; z-index: 1; top: 10%;
-        }
-        .hero-image img { max-width: 100%; max-height: 80vh; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 30px 40px rgba(15, 23, 42, 0.1)); }
-        
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px; background: #FEF3C7; color: #D97706;
-            padding: 8px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;
-        }
-        .hero h1 { font-size: 52px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; color: var(--text-dark); letter-spacing: -1px; text-transform: uppercase;}
-        .hero h1 span { color: var(--primary); }
-        .hero p.subtitle { font-size: 18px; color: var(--text-gray); margin-bottom: 35px; line-height: 1.6; font-weight: 500; }
-        
-        .expert-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-        .stat-item {
-            background: var(--bg-card); border: 1px solid var(--border-light); padding: 16px; border-radius: 16px;
-            display: flex; align-items: center; gap: 16px; box-shadow: var(--shadow-sm); transition: var(--transition);
-        }
-        .stat-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #BFDBFE; }
-        .stat-item i { font-size: 32px; color: var(--primary); background: #EFF6FF; padding: 10px; border-radius: 12px; }
-        .stat-item div { font-size: 13px; color: var(--text-gray); line-height: 1.3; }
-        .stat-item div strong { display: block; color: var(--text-dark); font-size: 17px; font-weight: 800; margin-bottom: 2px; }
-        .hide-on-mobile { display: flex; } /* Видимы на ПК */
 
-        .main-btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            width: 100%; max-width: 380px; background: var(--primary); color: white;
-            padding: 20px 30px; border-radius: 16px; font-size: 18px; font-weight: 800;
-            border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3); transition: var(--transition); text-decoration: none; margin-bottom: 20px;
+        .hero-master .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
         }
-        .main-btn:hover { background: var(--primary-hover); transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4); }
 
-        .timer-box { display: flex; gap: 12px; align-items: center; }
-        .time-block { background: var(--bg-card); border: 1px solid var(--border-light); padding: 10px 15px; border-radius: 12px; min-width: 75px; text-align: center; box-shadow: var(--shadow-sm); }
-        .time-block span { display: block; font-size: 22px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 4px; }
-        .time-block small { font-size: 10px; color: var(--text-gray); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
-
-        /* ================= ОБЩИЕ СТИЛИ СЕКЦИЙ ================= */
-        .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-        .title-h2 { text-align: center; font-size: 36px; font-weight: 900; margin-bottom: 50px; color: var(--text-dark); }
-        .title-h2 span { color: var(--primary); position: relative; }
-        .title-h2 span::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 4px; background: var(--accent-gold); border-radius: 2px; }
-
-        /* ================= БЛОК 2 И 3 (КАРТОЧКИ) ================= */
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-        .card { 
-            background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 24px;
-            padding: 35px 25px; transition: var(--transition); box-shadow: var(--shadow-sm); text-align: left;
+        .hm-left {
+            flex: 1;
+            max-width: 650px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: #BFDBFE; }
-        .card i.main-icon { font-size: 46px; color: var(--primary); margin-bottom: 20px; display: inline-block; background: #EFF6FF; padding: 15px; border-radius: 16px; }
-        .card h4 { font-size: 22px; font-weight: 800; margin-bottom: 12px; color: var(--text-dark); }
-        .card p { color: var(--text-gray); font-size: 15px; line-height: 1.6; }
 
-        /* ================= БЛОК 4: ОТЗЫВЫ (SOCIAL PROOF) ================= */
-        .reviews-scroll { display: flex; gap: 20px; overflow-x: auto; padding: 30px; scroll-snap-type: x mandatory; }
-        .reviews-scroll::-webkit-scrollbar { height: 6px; }
-        .reviews-scroll::-webkit-scrollbar-thumb { background: #CBD5F5; border-radius: 999px; }
-        .review-card {
-            min-width: 260px; height: 360px; scroll-snap-align: center;
-            border-radius: 24px; overflow: hidden;
-            background: #ffffff; border: 1px solid #E2E8F0;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12); position: relative; transition: var(--transition);
+        .hm-right {
+            flex: 0.9;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-self: flex-end;
         }
-        .review-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18); border-color: #BFDBFE; }
-        .review-image { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        /* ================= БЛОК 5: КЛАССИЧЕСКАЯ ФОРМА ================= */
-        .quiz-section-wrapper { background: linear-gradient(180deg, var(--bg-body) 0%, #E0F2FE 100%); padding-bottom: 100px; }
-        .quiz-container { 
-            max-width: 750px; margin: 0 auto; background: var(--bg-card); 
-            border-radius: 30px; padding: 50px 40px; box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255,255,255,0.8); position: relative;
+        .hm-right img.expert {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
         }
-        .quiz-header { text-align: center; margin-bottom: 30px; }
-        .quiz-header h2 { font-size: 30px; font-weight: 900; margin-bottom: 10px; }
-        .quiz-header p { color: var(--text-gray); font-size: 16px; }
 
-        .options-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
-        .option-label {
-            background: #F8FAFC; border: 1px solid var(--border-light); padding: 12px 16px;
-            border-radius: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px;
-            transition: var(--transition); font-weight: 500; font-size: 15px; color: var(--text-dark);
+        .hm-text-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
-        .option-label:hover { border-color: #BFDBFE; background: #EFF6FF; }
-        .option-label input { margin-right: 8px; }
 
-        .input-group { position: relative; margin-bottom: 22px; }
-        .input-group i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 24px; transition: 0.3s; }
-        .custom-input {
-            width: 100%; padding: 20px 20px 20px 60px; background: #F8FAFC;
-            border: 2px solid var(--border-light); border-radius: 16px; color: var(--text-dark);
-            font-size: 17px; font-weight: 500; font-family: inherit; transition: var(--transition);
+        .hm-badge {
+            background: linear-gradient(90deg, #FCD34D, #F59E0B);
+            color: #27272A;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
         }
-        .custom-input::placeholder { color: #94A3B8; }
-        .custom-input:focus { border-color: var(--primary); background: #FFFFFF; box-shadow: 0 0 0 4px rgba(37,99,235,0.1); outline: none; }
-        .custom-input:focus + i { color: var(--primary); }
 
-        .quiz-buttons { display: flex; justify-content: flex-end; gap: 16px; margin-top: 10px; }
-        .btn-next {
-            background: var(--primary); border: none; color: white; flex: 1;
-            padding: 18px 30px; border-radius: 14px; cursor: pointer; font-weight: 800; font-size: 18px; transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3); display: flex; justify-content: center; align-items: center; gap: 10px;
+        .hm-text-top h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
-        .btn-next:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4); }
 
-        /* ================= АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ ================= */
-        .reveal { opacity: 0; transform: translateY(40px); transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* ================= МОДАЛЬНОЕ ОКНО ================= */
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px);
-            display: none; justify-content: center; align-items: center; z-index: 999; opacity: 0; transition: opacity 0.3s;
+        .hm-text-top h1 span.gold {
+            background: linear-gradient(90deg, #FDE68A, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.4));
         }
-        .modal-overlay.show { display: flex; opacity: 1; }
-        .modal-content { background: #fff; padding: 50px 40px; border-radius: 24px; text-align: center; max-width: 450px; width: 90%; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.25); }
-        .modal-content i.success-icon { font-size: 70px; color: #10B981; margin-bottom: 20px; }
-        .tg-btn {
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            background: #0088cc; color: white; padding: 18px; border-radius: 14px; font-weight: 800; text-decoration: none; margin-top: 25px; transition: 0.3s; font-size: 16px;
-        }
-        .tg-btn:hover { background: #0077b5; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 136, 204, 0.3); }
 
-        /* ================= АДАПТИВ (МАГИЯ ДЛЯ МОБИЛОК КАК НА ВАШЕМ СКРИНШОТЕ) ================= */
+        .hm-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 35px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            background: rgba(20, 20, 25, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(248, 209, 116, 0.3);
+            color: #E2E8F0;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            cursor: default;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-tag i {
+            color: #F8D174;
+            font-size: 20px;
+        }
+
+        .hero-tag:hover {
+            background: rgba(248, 209, 116, 0.15);
+            border-color: #F8D174;
+            color: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(248, 209, 116, 0.2);
+        }
+
+        .hm-btn-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hm-btn {
+            background: linear-gradient(180deg, #FDE68A 0%, #F59E0B 100%);
+            border: 1px solid #FEF3C7;
+            border-radius: 14px;
+            padding: 22px 90px 22px 35px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hm-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: rotate(30deg);
+            animation: buttonShine 4s infinite;
+        }
+
+        @keyframes buttonShine {
+            0% {
+                left: -60%;
+            }
+
+            20% {
+                left: 150%;
+            }
+
+            100% {
+                left: 150%;
+            }
+        }
+
+        .hm-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .hm-btn i {
+            font-size: 34px;
+            color: #451A03;
+        }
+
+        .hm-btn-text {
+            color: #451A03;
+            font-weight: 900;
+            font-size: 19px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: left;
+        }
+
         @media (max-width: 992px) {
-            .hero {
-                display: flex;
+            .hero-master {
+                background-image: url('images/bg-mobile.png');
+                background-position: top center;
+                align-items: flex-start;
+                padding-top: 60px;
+                min-height: auto;
+                padding-bottom: 60px;
+            }
+
+            .hero-glow {
+                top: 0;
+                left: -50%;
+                width: 200%;
+                height: 300px;
+            }
+
+            .hero-master .container {
                 flex-direction: column;
+                padding: 0 15px;
+            }
+
+            .hm-left {
+                display: contents;
+            }
+
+            .hm-text-top {
+                order: 1;
                 align-items: center;
                 text-align: center;
-                padding-top: 30px;
-                gap: 0;
-            }
-            
-            /* Текст уходит на самый верх */
-            .hero-text-wrap {
-                order: 1;
-                padding-top: 0;
-                padding-bottom: 10px;
                 width: 100%;
+                z-index: 2;
             }
-            .hero-text-wrap h1 { font-size: 38px; line-height: 1.2; margin-bottom: 15px;}
-            .hero-text-wrap p { font-size: 16px; margin-bottom: 0; }
-            
-            /* Фотография идет сразу под текстом */
-            .hero-image {
-                order: 2;
-                margin-top: 10px;
-                margin-bottom: -60px; /* Отрицательный отступ, чтобы плашки "наехали" на фото */
-                z-index: 1;
+
+            .hm-badge {
+                font-size: 12px;
+                padding: 6px 12px;
+                margin-bottom: 20px;
             }
-            .hero-image::before { width: 300px; height: 300px; }
-            .hero-image img { max-height: 45vh; }
-            
-            /* Кнопки и плашки наезжают поверх фото */
-            .hero-action-wrap {
-                order: 3;
-                width: 100%;
-                z-index: 5;
-                position: relative;
-                padding-bottom: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .expert-stats {
-                grid-template-columns: 1fr;
-                gap: 8px;
-                width: 90%;
-                margin: 0 auto 20px;
-                /* Стекло поверх фото */
-                background: rgba(255, 255, 255, 0.6);
-                backdrop-filter: blur(15px);
-                -webkit-backdrop-filter: blur(15px);
-                padding: 15px;
-                border-radius: 20px;
-                border: 1px solid rgba(255,255,255,0.8);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            }
-            
-            /* Скрываем лишние плашки на мобилках, оставляем только 2 (как на картинке) */
-            .hide-on-mobile { display: none; }
-            
-            /* Плашки темные, как на вашем референсе */
-            .stat-item {
-                background: #334155;
-                border: 1px solid rgba(255,255,255,0.1);
-                color: white;
-                padding: 14px 18px;
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            }
-            .stat-item i { color: #FCD34D; font-size: 26px; background: transparent; padding: 0; }
-            .stat-item div { color: #CBD5E1; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
-            .stat-item div strong { color: white; font-size: 14px; margin-bottom: 0; display: inline-block; margin-right: 5px; }
-            
-            /* Золотая кнопка из референса */
-            .main-btn {
-                background: linear-gradient(90deg, #FCD34D, #F59E0B);
-                color: #78350F; /* Темно-коричневый текст */
-                box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
-                border: 1px solid #FEF3C7;
-                width: 90%;
+
+            .hm-text-top h1 {
+                font-size: 38px;
                 margin-bottom: 15px;
             }
-            .main-btn i { color: #78350F; }
-            .main-btn:hover { background: linear-gradient(90deg, #FDE68A, #D97706); }
-            
-            .timer-box { justify-content: center; }
-        }
 
-        @media (max-width: 768px) {
-            .quiz-container { padding: 40px 20px; border-radius: 24px; }
-        }
-        @media (max-width: 576px) {
-            .hero-text-wrap h1 { font-size: 32px; }
-            .section { padding: 50px 20px; }
-            .title-h2 { font-size: 30px; margin-bottom: 25px; }
-        }
-
-        /* ================= АККОРДИОН ДЛЯ БЛОКА "ПРОГРАММА КУРСА" (МОБИЛЬНАЯ ВЕРСИЯ) ================= */
-        @media (max-width: 768px) {
-            .grid-cards { grid-template-columns: 1fr; gap: 16px; }
-            .card { cursor: pointer; padding: 22px 20px; position: relative; }
-            .card i.main-icon { font-size: 32px; margin-bottom: 0; margin-right: 12px; }
-            .card-header-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-            .card-title-wrap { display: flex; align-items: center; gap: 12px; flex: 1; }
-            .card-toggle-icon { font-size: 18px; color: var(--text-gray); transition: transform 0.25s ease; }
-            .card h4 { font-size: 20px; margin-bottom: 0; }
-            .card p {
-                max-height: 0; opacity: 0; overflow: hidden; margin-top: 0;
-                transition: max-height 0.3s ease, opacity 0.25s ease, margin-top 0.25s ease;
+            .hm-text-top p {
+                font-size: 15px;
             }
-            .card.card-open p { max-height: 220px; opacity: 1; margin-top: 12px; }
-            .card.card-open .card-toggle-icon { transform: rotate(180deg); }
+
+            .hm-right {
+                order: 2;
+                width: 100%;
+                justify-content: center;
+                align-items: flex-end;
+                z-index: 1;
+                margin-top: 0px;
+                margin-bottom: -100px;
+            }
+
+            .hm-right img.expert {
+                max-height: 50vh;
+            }
+
+            .hm-actions {
+                order: 3;
+                width: 100%;
+                align-items: center;
+                z-index: 5;
+            }
+
+            .hero-tags {
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 25px;
+            }
+
+            .hero-tag {
+                font-size: 12px;
+                padding: 10px 16px;
+                background: rgba(15, 15, 20, 0.85);
+            }
+
+            .hero-tag i {
+                font-size: 16px;
+            }
+
+            .hm-btn {
+                padding: 18px 70px 18px 25px;
+                width: 100%;
+                max-width: 350px;
+                justify-content: center;
+            }
+
+            .hm-btn-text {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hm-text-top h1 {
+                font-size: 28px;
+            }
+
+            .hero-tag {
+                font-size: 11px;
+                padding: 8px 12px;
+            }
+        }
+
+        /* ================= ОБЩИЕ СТИЛИ ДЛЯ НОВЫХ БЛОКОВ ================= */
+        .section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .title-h2 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .title-h2 span {
+            background: linear-gradient(90deg, #FDE68A, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ================= БЛОК 2: KURS HAQIDA (АККОРДЕОН В СТИЛЕ DARK/GOLD) ================= */
+        .course-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-badge {
+            border: 2px solid var(--primary);
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--text-dark);
+            font-size: 22px;
+            font-weight: 900;
+            padding: 10px 24px;
+            display: inline-block;
+            text-transform: uppercase;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .module-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .module-item {
+            background: rgba(20, 20, 25, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .module-item:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .accordion-header h3 {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .accordion-icon {
+            font-size: 24px;
+            color: var(--text-gray);
+            transition: transform 0.4s;
+        }
+
+        .module-item.active {
+            border-color: var(--primary);
+            background: var(--bg-card);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.05);
+        }
+
+        .module-item.active .accordion-header h3 {
+            background: linear-gradient(90deg, #FDE68A, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .module-item.active .accordion-icon {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        .accordion-body {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+        }
+
+        .module-item.active .accordion-body {
+            max-height: 500px;
+            opacity: 1;
+            padding: 0 30px 30px 30px;
+        }
+
+        .module-right {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 20px 25px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .module-right p {
+            font-size: 16px;
+            color: #D4D4D8;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .accordion-header {
+                padding: 20px;
+            }
+
+            .accordion-header h3 {
+                font-size: 16px;
+                padding-right: 15px;
+            }
+
+            .accordion-body {
+                padding: 0 20px;
+            }
+
+            .module-item.active .accordion-body {
+                padding: 0 20px 20px 20px;
+            }
+        }
+
+        /* ================= БЛОК 4: LOYIHALAR (КАРУСЕЛЬ) ================= */
+        .portfolio-section {
+            overflow: hidden;
+            padding-bottom: 60px;
+        }
+
+        .portfolio-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0 40px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .portfolio-scroll::-webkit-scrollbar {
+            display: none;
+            /* Chrome */
+        }
+
+        .portfolio-card {
+            min-width: 500px;
+            width: 500px;
+            scroll-snap-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.15);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            aspect-ratio: 10/4;
+            /* Квадрат как на вашем фото */
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-card {
+                min-width: 380px;
+                width: 380px;
+            }
+        }
+
+        /* ================= БЛОК 5: НОВАЯ ФОРМА РЕГИСТРАЦИИ (ПО ВАШЕМУ ТЗ) ================= */
+        .quiz-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #FDE68A, #F59E0B);
+        }
+
+        .quiz-title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+        }
+
+        .input-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-group label {
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .custom-input {
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(10, 10, 12, 0.8);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            color: var(--text-dark);
+            font-size: 16px;
+            font-weight: 500;
+            font-family: inherit;
+            transition: var(--transition);
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .custom-input::placeholder {
+            color: #52525B;
+        }
+
+        .custom-input:focus {
+            border-color: var(--primary);
+            background: #000;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+            outline: none;
+        }
+
+        /* Select dropdown arrow */
+        select.custom-input {
+            padding-right: 45px;
+            cursor: pointer;
+        }
+
+        select.custom-input option {
+            background: #121216;
+            color: white;
+        }
+
+        .input-wrapper .ph-caret-down {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 20px;
+            pointer-events: none;
+        }
+
+        .submit-btn {
+            background: linear-gradient(180deg, #FDE68A 0%, #F59E0B 100%);
+            border: 1px solid #FEF3C7;
+            border-radius: 12px;
+            padding: 20px 30px;
+            width: 100%;
+            color: #451A03;
+            font-weight: 900;
+            font-size: 18px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-subtext {
+            text-align: center;
+            color: var(--text-gray);
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .form-subtext b {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .quiz-container {
+                padding: 40px 20px;
+            }
+
+            .quiz-title {
+                font-size: 22px;
+            }
+        }
+
+        /* ================= МОДАЛЬНОЕ ОКНО (THANK YOU) ================= */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            padding: 50px 40px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 25px 50px rgba(245, 158, 11, 0.1);
+            position: relative;
+        }
+
+        .modal-content i.success-icon {
+            font-size: 70px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.4));
+        }
+
+        .tg-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #2AABEE;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            margin-top: 25px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .tg-btn:hover {
+            background: #229ED9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(42, 171, 238, 0.3);
+        }
+
+        /* ================= АНИМАЦИИ ================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Бегущая строка -->
+    <!-- Бегущая строка (Оригинальная) -->
     <div class="marquee-container">
         <div class="marquee">
-            <span class="marquee-inner">🔥 RO'YXAT OCHIQ <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
-            <span class="marquee-inner" aria-hidden="true">🔥 RO'YXAT OCHIQ <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
+            <span class="marquee-inner">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
+            <span class="marquee-inner" aria-hidden="true">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
         </div>
     </div>
 
-    <!-- Шапка -->
-    <header>
-        <div class="logo">SAV<span>MEDIA</span></div>
-        <a href="#quiz-section" class="btn-small">Chegirmani olish</a>
-    </header>
+    <!-- Блок 1: Главный экран (ОРИГИНАЛЬНЫЙ - НЕ ИЗМЕНЕН) -->
+    <section class="hero-master">
+        <!-- Световой блик на заднем фоне для глубины -->
+        <div class="hero-glow"></div>
 
-    <!-- Блок 1: Главный экран (ОБНОВЛЕННЫЙ МОБИЛЬНЫЙ UX) -->
-    <section class="hero reveal">
-        
-        <!-- Текст (сверху на телефоне) -->
-        <div class="hero-text-wrap">
-            <div class="badge"><i class="ph-fill ph-lightning"></i> Yilning oxirgi oqimi</div>
-            <h1>40 kunlik premium<br><span>«Biznes SMM»</span></h1>
-            <p class="subtitle">Instagramda biznesni bosqichma-bosqich rivojlantiring — noldan natijagacha. Mijozlarni avtomatik olib keladigan tizimni joriy qiling.</p>
-        </div>
-        
-        <!-- Фото (по центру на телефоне) -->
-        <div class="hero-image">
-            <img src="images/savlat-dabilov.png" alt="Savlat Dabilov — SMM eksperti">
-        </div>
+        <div class="container">
 
-        <!-- Кнопки и плашки (наезжают на низ фото) -->
-        <div class="hero-action-wrap">
-            <div class="expert-stats">
-                <div class="stat-item">
-                    <i class="ph-fill ph-briefcase"></i>
-                    <div><strong>Savmedia</strong> Agentlik asoschisi</div>
+            <!-- Левая часть -->
+            <div class="hm-left">
+                <!-- 1. Текстовая часть (Сверху на мобилке) -->
+                <div class="hm-text-top">
+                    <div class="hm-badge"><i class="ph-fill ph-lightning"></i> 40 kunlik Biznes SMM kursi</div>
+                    <h1>Biznesni <span class="gold">0 DAN</span> INSTAGRAMDA<br> <span
+                            class="gold">rivojlantirish</span> kursi</h1>
                 </div>
-                <div class="stat-item">
-                    <i class="ph-fill ph-star"></i>
-                    <div><strong>4+ yil</strong> SMM tajribasi</div>
-                </div>
-                <!-- На телефоне нижние две плашки скрываются для компактности (hide-on-mobile) -->
-                <div class="stat-item hide-on-mobile">
-                    <i class="ph-fill ph-rocket-launch"></i>
-                    <div><strong>70+ loyiha</strong> Amalga oshirildi</div>
-                </div>
-                <div class="stat-item hide-on-mobile">
-                    <i class="ph-fill ph-users"></i>
-                    <div><strong>400+ o'quvchi</strong> O'qitildi</div>
-                </div>
-            </div>
-            
-            <a href="#quiz-section" class="main-btn">Joyni band qilish <i class="ph-bold ph-arrow-right"></i></a>
-            
-            <div class="timer-box">
-                <span style="font-size: 15px; color: var(--text-dark); font-weight: 700;">Chegirma tugaydi:</span>
-                <div class="time-block"><span id="hours">08</span><small>Soat</small></div>
-                <div class="time-block"><span id="minutes">45</span><small>Daqiqa</small></div>
-                <div class="time-block"><span id="seconds">12</span><small>Soniya</small></div>
-            </div>
-        </div>
-        
-    </section>
 
-    <!-- Блок 2: Программа курса -->
-    <section id="quiz-section" class="section reveal">
-        <h2 class="title-h2">O'qitish <span>Dasturi</span></h2>
-        <div class="grid-cards" id="programAccordion">
-            <div class="card">
-                <div class="card-header-row">
-                    <div class="card-title-wrap">
-                        <i class="ph-duotone ph-rocket-launch main-icon"></i>
-                        <h4>01. SMM asoslari</h4>
+                <!-- 2. Плашки и Кнопка (Снизу на мобилке, поверх фото) -->
+                <div class="hm-actions">
+                    <!-- Стеклянные теги (Улучшенный дизайн) -->
+                    <div class="hero-tags">
+                        <span class="hero-tag"><i class="ph-fill ph-briefcase"></i> Savmedia.uz Asoschisi</span>
+                        <span class="hero-tag"><i class="ph-fill ph-star"></i> 4+ Yillik Tajriba</span>
+                        <span class="hero-tag"><i class="ph-fill ph-rocket-launch"></i> 70+ Loyihalar</span>
+                        <span class="hero-tag"><i class="ph-fill ph-users"></i> 400+ Shogirdlar</span>
                     </div>
-                    <i class="ph-bold ph-caret-down card-toggle-icon"></i>
-                </div>
-                <p>Instagramda biznes yuritish strategiyasi, algoritmlar, obunachilarni jalb qilish va onlayn savdoni oshirish usullari.</p>
-            </div>
-            <div class="card">
-                <div class="card-header-row">
-                    <div class="card-title-wrap">
-                        <i class="ph-duotone ph-device-mobile-camera main-icon"></i>
-                        <h4>02. Mobilografiya</h4>
+
+                    <div class="hm-btn-wrapper">
+                        <a href="#course-program" class="hm-btn">
+                            <i class="ph-bold ph-fingerprint"></i>
+                            <div class="hm-btn-text">Ro’yxatdan o’tish</div>
+                        </a>
                     </div>
-                    <i class="ph-bold ph-caret-down card-toggle-icon"></i>
+
+                    <!-- Текст призыва и кнопка -->
+                    <p
+                        style="color:#F8D174; font-weight:600; text-align:center; margin-top:15px; max-width:420px; font-size: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                        Hoziroq ro’yxatdan o’tib, kurs uchun 500.000 so’mlik chegirmaga ega bo’ling! 🎁
+                    </p>
                 </div>
-                <p>Smartfonda suratga olish va montaj qilish san'ati. Zo'r g'oyadan professional rolikgacha to'liq tsikl.</p>
             </div>
-            <div class="card">
-                <div class="card-header-row">
-                    <div class="card-title-wrap">
-                        <i class="ph-duotone ph-pen-nib main-icon"></i>
-                        <h4>03. Kontent-marketing</h4>
-                    </div>
-                    <i class="ph-bold ph-caret-down card-toggle-icon"></i>
-                </div>
-                <p>Millionlab ko'riladigan Reels uchun ssenariylar, trigerlar va "hook"lardan foydalanish. Kontent orqali savdo.</p>
+
+            <!-- Правая часть (Посередине на мобилке) -->
+            <div class="hm-right">
+                <!-- ВНИМАНИЕ: Сюда ваше фото без фона -->
+                <img src="images/savlat.png" alt="Savlat Dabilov" class="expert">
             </div>
-            <div class="card">
-                <div class="card-header-row">
-                    <div class="card-title-wrap">
-                        <i class="ph-duotone ph-target main-icon"></i>
-                        <h4>04. Target reklama</h4>
-                    </div>
-                    <i class="ph-bold ph-caret-down card-toggle-icon"></i>
-                </div>
-                <p>Facebook Ads orqali reklama. Target orqali $5,000 dan $10,000 gacha savdo strategiyasi.</p>
-            </div>
+
         </div>
     </section>
 
-    <!-- Блок 4: Отзывы (Social Proof) -->
-    <section class="section reveal reviews-section">
-        <h2 class="title-h2">O'quvchilar <span>sharhlari</span></h2>
-        <div class="reviews-scroll">
-            <div class="review-card">
-                <img src="images/review-1.jpg" alt="O'quvchi sharhi 1" class="review-image">
+    <!-- Блок 2: Программа курса (АККОРДЕОН В СТИЛЕ DARK/GOLD) -->
+    <section class="section reveal course-section" id="course-program">
+        <div style="text-align: left;">
+            <div class="course-badge">KURS HAQIDA</div>
+        </div>
+
+        <div class="module-list">
+            <div class="module-item active">
+                <div class="accordion-header">
+                    <h3>SMM ASOSLARI</h3>
+                    <i class="ph-bold ph-caret-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="module-right">
+                        <p>Instagramda biznesni qanday yuritish, obunachilar sonini oshirish va onlayn savdoni oshirish;
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="review-card">
-                <img src="images/review-2.jpg" alt="O'quvchi sharhi 2" class="review-image">
+
+            <div class="module-item">
+                <div class="accordion-header">
+                    <h3>MOBILOGRAFIYA</h3>
+                    <i class="ph-bold ph-caret-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="module-right">
+                        <p>Telefon orqali syomka qilish va montaj qilish darslari. 0 dan bemalol o'zingiz syomka va
+                            montaj qilishni o'rganasiz;</p>
+                    </div>
+                </div>
             </div>
-            <div class="review-card">
-                <img src="images/review-3.jpg" alt="O'quvchi sharhi 3" class="review-image">
+
+            <div class="module-item">
+                <div class="accordion-header">
+                    <h3>KONTENT MARKETING</h3>
+                    <i class="ph-bold ph-caret-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="module-right">
+                        <p>Million prasmotrga ega bo'ladigan video kontent uchun ssenariy yozish va hooklarni ishlatish.
+                            Faqat kontent orqali savdoni oshirish;</p>
+                    </div>
+                </div>
             </div>
-            <div class="review-card">
-                <img src="images/review-4.jpg" alt="O'quvchi sharhi 4" class="review-image">
+
+            <div class="module-item">
+                <div class="accordion-header">
+                    <h3>TARGETING ASOSLARI</h3>
+                    <i class="ph-bold ph-caret-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="module-right">
+                        <p>Target reklamasi Facebook orqali yoqish va target orqali minimal 5.000$-10.000$ savdo qilish;
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок 5: Классическая форма -->
-    <section class="quiz-section-wrapper reveal">
-        <div class="section" style="padding-bottom: 0;">
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h2>Ariza qoldiring</h2>
-                    <p>Qisqa formani to'ldiring va darhol <b>500 000 so'm</b> chegirmani oling 🎁</p>
-                </div>
+    <!-- Блок 4: Проекты (КАРУСЕЛЬ) -->
+    <section class="section reveal portfolio-section">
+        <h2 class="title-h2">Biz ishlagan <span>loyihalar</span></h2>
 
-                <form id="leadForm">
-                    <div style="margin-bottom: 24px;">
-                        <h3 style="font-size:20px; margin-bottom:12px; color:var(--text-dark);">Sizda allaqachon ishlaydigan biznes bormi?</h3>
-                        <div class="options-grid">
-                            <label class="option-label">
-                                <input type="radio" name="hasBusiness" value="Ha">
-                                Ha, allaqachon ishlayman
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="hasBusiness" value="Yo'q">
-                                Yo'q, boshlashni xohlayman
-                            </label>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 24px;">
-                        <h3 style="font-size:20px; margin-bottom:8px; color:var(--text-dark);">Biznesingiz nomi nima?</h3>
-                        <p style=" margin-top:-15px; margin-bottom:25px; color:var(--text-gray); font-size:15px;">(Agar biznesingiz yo'q bo'lsa, "Yo'q" deb yozing)</p>
-                        
-                        <div class="input-group">
-                            <input type="text" id="businessName" class="custom-input" placeholder="Masalan: Kiyim do'koni" required>
-                            <i class="ph-duotone ph-storefront"></i>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 24px;">
-                        <h3 style="font-size:20px; margin-bottom:12px; color:var(--text-dark);">Kursda kim ta'lim oladi?</h3>
-                        <div class="options-grid">
-                            <label class="option-label">
-                                <input type="radio" name="whoStudies" value="Men o'zim">
-                                Men o'zim
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="whoStudies" value="Bola">
-                                Farzandim
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="whoStudies" value="Kompaniya xodimlari">
-                                Xodimlarim
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="whoStudies" value="Qarindoshlar">
-                                Qarindoshim
-                            </label>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 24px;">
-                        <h3 style="font-size:20px; margin-bottom:12px; color:var(--text-dark);">SMM sohasida tajribangiz bormi?</h3>
-                        <div class="options-grid">
-                            <label class="option-label">
-                                <input type="radio" name="smmExperience" value="Yo'q, noldan">
-                                Yo'q, noldan boshlayman
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="smmExperience" value="O'zim urindim">
-                                O'zim urindim, natija bo'lmadi
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="smmExperience" value="Mutaxassis yolladim">
-                                Mutaxassis yolladim, yoqmadi
-                            </label>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 16px;">
-                        <h3 style="font-size:20px; margin-bottom:8px; color:var(--text-dark);">Ajoyib! Chegirmani qaysi raqamga rasmiylashtiramiz? ✨</h3>
-                        <p style="text-align:center; margin-top:-15px; margin-bottom:25px; color:var(--text-gray); font-size:15px;">Menejerimiz dasturni yuborish uchun aloqaga chiqadi</p>
-                        
-                        <div class="input-group">
-                            <input type="text" id="userName" class="custom-input" placeholder="Ismingiz" required>
-                            <i class="ph-duotone ph-user"></i>
-                        </div>
-                        <div class="input-group">
-                            <input type="number" id="userAge" class="custom-input" placeholder="Yoshingiz" required min="10" max="99">
-                            <i class="ph-duotone ph-calendar-blank"></i>
-                        </div>
-                        <div class="input-group">
-                            <input type="tel" id="userPhone" class="custom-input" placeholder="+998 (__) ___-__-__" required>
-                            <i class="ph-duotone ph-phone"></i>
-                        </div>
-
-                        <div class="quiz-buttons">
-                            <button type="submit" class="btn-next" id="submitBtn">Tugatish va Chegirmani olish 🎁</button>
-                        </div>
-                        <p style="text-align:center; font-size:13px; color:#94A3B8; margin-top:16px;">Tugmani bosish orqali maxfiylik siyosatiga rozilik bildirasiz.</p>
-                    </div>
-                </form>
+        <div class="portfolio-scroll">
+            <!-- Вставьте сюда ваши квадратные картинки из инстаграма (как на скриншоте) -->
+            <div class="portfolio-card">
+                <img src="images/1.webp" alt="Loyiha 1">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/2.webp" alt="Loyiha 2">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/3.webp" alt="Loyiha 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/4.webp" alt="Loyiha 4">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/5.webp" alt="Loyiha 5">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/6.webp" alt="Loyiha 6">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/7.webp" alt="Loyiha 7">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/8.webp" alt="Loyiha 8">
             </div>
         </div>
     </section>
 
-    <!-- Модальное окно (Thank You) -->
+    <!-- Блок 5: Новая форма регистрации -->
+    <section class="section reveal" id="quiz-section">
+        <div class="quiz-container">
+            <h2 class="quiz-title">Kurs haqida ma’lumot olish uchun <br><span>ro’yxatdan o’ting!</span></h2>
+
+            <form id="leadForm">
+                <div class="form-grid">
+
+                    <!-- Savol 1 -->
+                    <div class="input-group">
+                        <label>Biznesingiz bormi?</label>
+                        <div class="input-wrapper">
+                            <select id="hasBusiness" class="custom-input" required>
+                                <option value="" disabled selected>Tanlang:</option>
+                                <option value="Ha">Ha</option>
+                                <option value="Yo'q">Yo'q</option>
+                            </select>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </div>
+                    </div>
+
+                    <!-- Savol 2 -->
+                    <div class="input-group">
+                        <label>Biznesingiz bo’lsa, nomini qoldiring. (Mavjud bo’lmasa, yo’q deb yozing)</label>
+                        <input type="text" id="businessName" class="custom-input" placeholder="Masalan: Kiyim do'koni"
+                            required>
+                    </div>
+
+                    <!-- Savol 3 -->
+                    <div class="input-group">
+                        <label>Kursda kim o’qimoqchi?</label>
+                        <div class="input-wrapper">
+                            <select id="whoStudies" class="custom-input" required>
+                                <option value="" disabled selected>Tanlang:</option>
+                                <option value="O'zim">O'zim</option>
+                                <option value="Farzandim">Farzandim</option>
+                                <option value="Ishxonamdagilar">Ishxonamdagilar</option>
+                                <option value="Yaqinlarim">Yaqinlarim</option>
+                            </select>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </div>
+                    </div>
+
+                    <!-- Savol 4 -->
+                    <div class="input-group">
+                        <label>SMM’dan foydalanganmisiz?</label>
+                        <div class="input-wrapper">
+                            <select id="smmExperience" class="custom-input" required>
+                                <option value="" disabled selected>Tanlang:</option>
+                                <option value="Hozircha yo'q">Hozircha yo'q</option>
+                                <option value="Ha, ammo natija qilolmaganman">Ha, ammo natija qilolmaganman</option>
+                                <option value="SMMchik ishlatdim. O'xshamadi">SMMchik ishlatdim. O'xshamadi</option>
+                            </select>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </div>
+                    </div>
+
+                    <!-- Savol 5 -->
+                    <div class="input-group">
+                        <label>Ismingiz:</label>
+                        <input type="text" id="userName" class="custom-input" placeholder="Ismingizni kiriting"
+                            required>
+                    </div>
+
+                    <!-- Savol 6 -->
+                    <div class="input-group">
+                        <label>Yoshingiz:</label>
+                        <input type="number" id="userAge" class="custom-input" placeholder="Masalan: 25" required
+                            min="10" max="99">
+                    </div>
+
+                    <!-- Savol 7 (To'liq kenglikda) -->
+                    <div class="input-group full-width">
+                        <label>Nomeringiz:</label>
+                        <input type="tel" id="userPhone" class="custom-input" placeholder="+998 (__) ___-__-__"
+                            required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Ro’yxatdan o’tish</button>
+                <p class="form-subtext">Hoziroq ro’yxatdan o’ting va 40 kunlik “BIZNES SMM” kursi uchun <b>500.000
+                        so’mlik chegirmaga ega bo’ling!</b></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Thank You Modal (По вашему тексту) -->
     <div class="modal-overlay" id="thankYouModal">
         <div class="modal-content">
             <i class="ph-fill ph-check-circle success-icon"></i>
-            <h2 style="font-size:30px; font-weight:900; margin-bottom:15px; color:var(--text-dark);">Tabriklaymiz! 🎉</h2>
-            <p style="color:var(--text-gray); font-size:16px; margin-bottom:25px;">Arizangiz muvaffaqiyatli qabul qilindi va <b>500 000 so'm chegirma</b> sizga band qilindi. Menejerimiz tez orada siz bilan bog'lanadi.</p>
-            
-            <p style="font-weight:700; color:var(--text-dark);">Kutishni xohlamaysizmi?</p>
+            <h2 style="font-size:30px; font-weight:900; margin-bottom:15px; color:var(--text-dark);">Tabriklaymiz!</h2>
+            <p style="color:var(--text-dark); font-size:16px; margin-bottom:25px; line-height:1.5; font-weight: 500;">
+                Siz ro’yxatdan o’tdingiz. Yaqin daqiqa ichida siz bilan bog’lanamiz.
+            </p>
+
+            <p style="color:var(--text-gray); font-size:14px; margin-bottom:15px; line-height:1.4;">
+                Agar hoziroq biz bilan bog’lanmoqchi bo’lsangiz, pastdagi TELEGRAM tugmasini bosib, bizga telegram
+                orqali yozing.
+            </p>
+
             <a href="https://t.me/umarali_ua" target="_blank" class="tg-btn">
-                <i class="ph-fill ph-telegram-logo" style="font-size:26px;"></i> Bizga Telegramda yozish
+                <i class="ph-fill ph-telegram-logo" style="font-size:26px;"></i> Telegram: t.me/umarali_ua
             </a>
-            <button onclick="closeModal()" style="margin-top:20px; background:none; border:none; color:#94A3B8; font-weight:600; cursor:pointer;">Oynani yopish</button>
+
+            <button onclick="closeModal()"
+                style="margin-top:25px; background:none; border:none; color:#52525B; font-weight:600; cursor:pointer; font-size: 14px; text-transform: uppercase;">Oynani
+                yopish</button>
         </div>
     </div>
 
     <script>
-        // Анимации при скролле
+        // Анимация при скролле
         const revealElements = document.querySelectorAll('.reveal');
         const revealOnScroll = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -592,100 +1111,66 @@
         }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
         revealElements.forEach(el => revealOnScroll.observe(el));
 
-        // Таймер
-        function updateTimer() {
-            const now = new Date();
-            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-            const diff = endOfDay - now;
-            if (diff <= 0) return;
-            document.getElementById('hours').innerText = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(Math.floor((diff / 1000 / 60) % 60)).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
-        }
-        setInterval(updateTimer, 1000); updateTimer();
-
-        // ================= АККОРДИОН "ПРОГРАММА КУРСА" ДЛЯ МОБИЛЬНЫХ =================
-        function initProgramAccordion() {
-            const isMobile = window.matchMedia('(max-width: 768px)').matches;
-            const container = document.getElementById('programAccordion');
-            if (!container) return;
-
-            const cards = Array.from(container.querySelectorAll('.card'));
-            cards.forEach(card => card.classList.remove('card-open'));
-
-            if (!isMobile) {
-                cards.forEach(card => {
-                    const p = card.querySelector('p');
-                    if (p) { p.style.maxHeight = ''; p.style.opacity = ''; p.style.marginTop = ''; }
-                });
-                return;
-            }
-
-            if (cards[0]) cards[0].classList.add('card-open');
-
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const alreadyOpen = card.classList.contains('card-open');
-                    cards.forEach(c => c.classList.remove('card-open'));
-                    if (!alreadyOpen) { card.classList.add('card-open'); }
+        // Аккордеон
+        function initCourseAccordion() {
+            const headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.module-item').forEach(el => el.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
                 });
             });
         }
-        window.addEventListener('load', initProgramAccordion);
-        window.addEventListener('resize', () => { initProgramAccordion(); });
+        window.addEventListener('load', initCourseAccordion);
 
-        // Маска телефона (Узбекистан)
+        // Маска для телефона
         const phoneInput = document.getElementById('userPhone');
         phoneInput.addEventListener('input', function (e) {
             let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
             if (!x[1]) { e.target.value = '+998'; return; }
-            if (x[1] !== '998') x[1] = '998'; 
+            if (x[1] !== '998') x[1] = '998';
             e.target.value = '+' + x[1] + (x[2] ? ' (' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
         });
-        phoneInput.addEventListener('focus', function() { if (this.value === '') this.value = '+998 ('; });
+        phoneInput.addEventListener('focus', function () { if (this.value === '') this.value = '+998 ('; });
 
-        // Отправка в Telegram
-        const BOT_TOKEN = 'YOUR_BOT_TOKEN'; // ВАШ ТОКЕН
-        const CHAT_ID = 'YOUR_CHAT_ID';     // ВАШ CHAT ID
+        // Отправка данных в Telegram
+        const BOT_TOKEN = 'ВАШ_ТОКЕН';
+        const CHAT_ID = 'ВАШ_CHAT_ID';
 
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const modal = document.getElementById('thankYouModal');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             if (phoneInput.value.length < 19) { alert('Iltimos, to\'liq telefon raqamini kiriting.'); return; }
-            
-            submitBtn.innerHTML = '<i class="ph-bold ph-spinner ph-spin"></i> Yuborilmoqda...'; 
+
+            submitBtn.innerHTML = 'Yuborilmoqda...';
             submitBtn.disabled = true;
 
-            const getRadioVal = (name) => {
-                const ele = document.getElementsByName(name);
-                for(let i=0; i<ele.length; i++) if(ele[i].checked) return ele[i].value;
-                return 'Ko\'rsatilmagan';
-            };
-
             const data = {
-                hasBusiness: getRadioVal('hasBusiness'),
+                hasBusiness: document.getElementById('hasBusiness').value,
                 businessName: document.getElementById('businessName').value,
-                whoStudies: getRadioVal('whoStudies'),
-                smmExperience: getRadioVal('smmExperience'),
+                whoStudies: document.getElementById('whoStudies').value,
+                smmExperience: document.getElementById('smmExperience').value,
                 userName: document.getElementById('userName').value,
                 userAge: document.getElementById('userAge').value,
                 userPhone: document.getElementById('userPhone').value
             };
 
             const text = `
-🔥 <b>Yangi VIP ariza (Biznes SMM)</b>
+🔥 <b>Yangi ariza (Biznes SMM)</b>
 
 👤 <b>Ism:</b> ${data.userName}
 🎂 <b>Yosh:</b> ${data.userAge}
 📞 <b>Telefon:</b> ${data.userPhone}
 
 💼 <b>Biznes bormi:</b> ${data.hasBusiness}
-🏢 <b>Nomi:</b> ${data.businessName}
-🎓 <b>Kim o'qiyadi:</b> ${data.whoStudies}
-📈 <b>Tajriba:</b> ${data.smmExperience}
+🏢 <b>Nomi/Holati:</b> ${data.businessName}
+🎓 <b>Kim o'qiydi:</b> ${data.whoStudies}
+📈 <b>SMM tajriba:</b> ${data.smmExperience}
             `;
 
             fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -693,18 +1178,18 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
             })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData.ok) {
-                    modal.classList.add('show');
-                    form.reset();
-                } else { alert('Yuborishda xato. Tokeni tekshiring.'); }
-            })
-            .catch(err => { alert('Tarmoq xatosi!'); console.error(err); })
-            .finally(() => { 
-                submitBtn.innerHTML = 'Tugatish va Chegirmani olish 🎁'; 
-                submitBtn.disabled = false; 
-            });
+                .then(res => res.json())
+                .then(resData => {
+                    if (resData.ok) {
+                        modal.classList.add('show');
+                        form.reset();
+                    } else { alert('Yuborishda xato yuz berdi. (Bot Token va Chat ID larni tekshiring)'); }
+                })
+                .catch(err => { alert('Tarmoq xatosi! Internetingizni tekshiring.'); console.error(err); })
+                .finally(() => {
+                    submitBtn.innerHTML = 'Ro’yxatdan o’tish';
+                    submitBtn.disabled = false;
+                });
         });
 
         function closeModal() { modal.classList.remove('show'); }

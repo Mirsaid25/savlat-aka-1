@@ -550,13 +550,40 @@
             overflow-x: auto;
             padding: 20px 0 40px;
             scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            /* Firefox */
+            
+            /* Улучшенный скролл для Firefox */
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) rgba(255, 255, 255, 0.05);
+            
+            /* Курсор мыши в виде "руки" для перетаскивания */
+            cursor: grab;
         }
 
+        .portfolio-scroll:active {
+            cursor: grabbing;
+        }
+
+        /* Улучшенный скролл для Chrome, Safari, Edge */
         .portfolio-scroll::-webkit-scrollbar {
-            display: none;
-            /* Chrome */
+            height: 10px; /* Сделали чуть толще для удобства */
+        }
+
+        .portfolio-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05); /* Полупрозрачная дорожка */
+            border-radius: 10px;
+            margin: 0 15px; /* Аккуратные отступы по бокам */
+        }
+
+        .portfolio-scroll::-webkit-scrollbar-thumb {
+            /* Премиальный золотой градиент */
+            background: linear-gradient(90deg, #F59E0B, #FDE68A, #F59E0B);
+            border-radius: 10px;
+            /* Эффект "рамки" цвета фона, чтобы скролл казался тоньше и изящнее */
+            border: 3px solid var(--bg-body); 
+        }
+
+        .portfolio-scroll::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(90deg, #D97706, #FCD34D, #D97706);
         }
 
         .portfolio-card {
@@ -570,6 +597,8 @@
             box-shadow: var(--shadow-md);
             transition: var(--transition);
             position: relative;
+            /* Предотвращаем выделение картинок при перетаскивании */
+            user-select: none; 
         }
 
         .portfolio-card:hover {
@@ -584,13 +613,13 @@
             display: block;
             object-fit: contain;
             aspect-ratio: 10/4;
-            /* Квадрат как на вашем фото */
+            pointer-events: none; /* Чтобы картинка не мешала перетаскиванию */
         }
 
         @media (max-width: 576px) {
             .portfolio-card {
-                min-width: 380px;
-                width: 380px;
+                min-width: 330px; /* Немного уменьшил для мобильных, чтобы было видно край следующей карточки */
+            width: 330px;
             }
         }
 
@@ -956,7 +985,7 @@
     </section>
 
     <!-- Блок 4: Проекты (КАРУСЕЛЬ) -->
-    <section class="section reveal portfolio-section">
+    <section class="section portfolio-section">
         <h2 class="title-h2">Biz ishlagan <span>loyihalar</span></h2>
 
         <div class="portfolio-scroll">
@@ -1136,8 +1165,8 @@
         phoneInput.addEventListener('focus', function () { if (this.value === '') this.value = '+998 ('; });
 
         // Отправка данных в Telegram
-        const BOT_TOKEN = 'ВАШ_ТОКЕН';
-        const CHAT_ID = 'ВАШ_CHAT_ID';
+        const BOT_TOKEN = '8654798388:AAFoQd2chuMr-f0iZemEpgiVzX6_hKrAdQY';
+        const CHAT_ID = '-5120105540';
 
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -1185,7 +1214,7 @@
                         form.reset();
                     } else { alert('Yuborishda xato yuz berdi. (Bot Token va Chat ID larni tekshiring)'); }
                 })
-                .catch(err => { alert('Tarmoq xatosi! Internetingizni tekshiring.'); console.error(err); })
+        .catch(err => { alert('Tarmoq xatosi! Internetingizni tekshiring.'); console.error(err); })
                 .finally(() => {
                     submitBtn.innerHTML = 'Ro’yxatdan o’tish';
                     submitBtn.disabled = false;
@@ -1193,6 +1222,42 @@
         });
 
         function closeModal() { modal.classList.remove('show'); }
+
+        // ================= DRAG-TO-SCROLL ДЛЯ КАРУСЕЛИ ПРОЕКТОВ =================
+        const slider = document.querySelector('.portfolio-scroll');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.style.cursor = 'grabbing';
+            // Отключаем плавную привязку (snap) во время ручного перетаскивания
+            slider.style.scrollSnapType = 'none'; 
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+            slider.style.scrollSnapType = 'x mandatory';
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+            // Включаем обратно привязку к карточкам после отпускания мыши
+            slider.style.scrollSnapType = 'x mandatory';
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Цифра 2 - это скорость прокрутки
+            slider.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 </html>

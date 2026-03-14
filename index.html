@@ -52,16 +52,45 @@
 
         /* ================= MARQUEE (БЕГУЩАЯ СТРОКА) - ОСТАВЛЕНО БЕЗ ИЗМЕНЕНИЙ ================= */
         .marquee-container {
-            width: 100%; z-index: 100;
+            width: 100%;
+            z-index: 100;
             background: linear-gradient(90deg, #451A03, #78350F, #451A03);
-            color: white; padding: 12px 0; overflow: hidden; white-space: nowrap; 
-            font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             border-bottom: 1px solid var(--border-light);
         }
-        .marquee { display: inline-flex; animation: marquee 25s linear infinite; }
-        .marquee-inner { padding-right: 50px; }
-        .marquee i { color: var(--accent-gold); margin: 0 5px; font-size: 16px; vertical-align: middle; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .marquee {
+            display: inline-flex;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-inner {
+            padding-right: 50px;
+        }
+
+        .marquee i {
+            color: var(--accent-gold);
+            margin: 0 5px;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
         /* ================= БЛОК 1: ПРЕМИУМ ДИЗАЙН (MAX ПРОКАЧКА) - ОСТАВЛЕНО БЕЗ ИЗМЕНЕНИЙ ================= */
         .hero-master {
@@ -339,7 +368,7 @@
             }
 
             .hm-right img.expert {
-                max-height: 50vh;
+                max-height: 60vh;
             }
 
             .hm-actions {
@@ -550,11 +579,11 @@
             overflow-x: auto;
             padding: 20px 0 40px;
             scroll-snap-type: x mandatory;
-            
+
             /* Улучшенный скролл для Firefox */
             scrollbar-width: thin;
             scrollbar-color: var(--primary) rgba(255, 255, 255, 0.05);
-            
+
             /* Курсор мыши в виде "руки" для перетаскивания */
             cursor: grab;
         }
@@ -565,13 +594,16 @@
 
         /* Улучшенный скролл для Chrome, Safari, Edge */
         .portfolio-scroll::-webkit-scrollbar {
-            height: 10px; /* Сделали чуть толще для удобства */
+            height: 10px;
+            /* Сделали чуть толще для удобства */
         }
 
         .portfolio-scroll::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05); /* Полупрозрачная дорожка */
+            background: rgba(255, 255, 255, 0.05);
+            /* Полупрозрачная дорожка */
             border-radius: 10px;
-            margin: 0 15px; /* Аккуратные отступы по бокам */
+            margin: 0 15px;
+            /* Аккуратные отступы по бокам */
         }
 
         .portfolio-scroll::-webkit-scrollbar-thumb {
@@ -579,7 +611,7 @@
             background: linear-gradient(90deg, #F59E0B, #FDE68A, #F59E0B);
             border-radius: 10px;
             /* Эффект "рамки" цвета фона, чтобы скролл казался тоньше и изящнее */
-            border: 3px solid var(--bg-body); 
+            border: 3px solid var(--bg-body);
         }
 
         .portfolio-scroll::-webkit-scrollbar-thumb:hover {
@@ -598,7 +630,7 @@
             transition: var(--transition);
             position: relative;
             /* Предотвращаем выделение картинок при перетаскивании */
-            user-select: none; 
+            user-select: none;
         }
 
         .portfolio-card:hover {
@@ -613,13 +645,15 @@
             display: block;
             object-fit: contain;
             aspect-ratio: 10/4;
-            pointer-events: none; /* Чтобы картинка не мешала перетаскиванию */
+            pointer-events: none;
+            /* Чтобы картинка не мешала перетаскиванию */
         }
 
         @media (max-width: 576px) {
             .portfolio-card {
-                min-width: 330px; /* Немного уменьшил для мобильных, чтобы было видно край следующей карточки */
-            width: 330px;
+                min-width: 330px;
+                /* Немного уменьшил для мобильных, чтобы было видно край следующей карточки */
+                width: 330px;
             }
         }
 
@@ -868,8 +902,10 @@
     <!-- Бегущая строка (Оригинальная) -->
     <div class="marquee-container">
         <div class="marquee">
-            <span class="marquee-inner">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
-            <span class="marquee-inner" aria-hidden="true">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
+            <span class="marquee-inner">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN OXIRIGACHA 500 000 SO'M
+                CHEGIRMA <i class="ph-fill ph-star"></i> </span>
+            <span class="marquee-inner" aria-hidden="true">Ro’yxatdan o’tish <i class="ph-fill ph-star"></i> KUN
+                OXIRIGACHA 500 000 SO'M CHEGIRMA <i class="ph-fill ph-star"></i> </span>
         </div>
     </div>
 
@@ -920,6 +956,39 @@
                 <img src="images/savlat.png" alt="Savlat Dabilov" class="expert">
             </div>
 
+        </div>
+    </section>
+
+    <!-- Блок 4: Проекты (КАРУСЕЛЬ) -->
+    <section class="section portfolio-section">
+        <h2 class="title-h2">Biz ishlagan <span>loyihalar</span></h2>
+
+        <div class="portfolio-scroll">
+            <!-- Вставьте сюда ваши квадратные картинки из инстаграма (как на скриншоте) -->
+            <div class="portfolio-card">
+                <img src="images/1.webp" alt="Loyiha 1">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/2.webp" alt="Loyiha 2">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/3.webp" alt="Loyiha 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/4.webp" alt="Loyiha 4">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/5.webp" alt="Loyiha 5">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/6.webp" alt="Loyiha 6">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/7.webp" alt="Loyiha 7">
+            </div>
+            <div class="portfolio-card">
+                <img src="images/8.webp" alt="Loyiha 8">
+            </div>
         </div>
     </section>
 
@@ -980,39 +1049,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Блок 4: Проекты (КАРУСЕЛЬ) -->
-    <section class="section portfolio-section">
-        <h2 class="title-h2">Biz ishlagan <span>loyihalar</span></h2>
-
-        <div class="portfolio-scroll">
-            <!-- Вставьте сюда ваши квадратные картинки из инстаграма (как на скриншоте) -->
-            <div class="portfolio-card">
-                <img src="images/1.webp" alt="Loyiha 1">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/2.webp" alt="Loyiha 2">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/3.webp" alt="Loyiha 3">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/4.webp" alt="Loyiha 4">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/5.webp" alt="Loyiha 5">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/6.webp" alt="Loyiha 6">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/7.webp" alt="Loyiha 7">
-            </div>
-            <div class="portfolio-card">
-                <img src="images/8.webp" alt="Loyiha 8">
             </div>
         </div>
     </section>
@@ -1210,7 +1246,7 @@
                         form.reset();
                     } else { alert('Yuborishda xato yuz berdi. (Bot Token va Chat ID larni tekshiring)'); }
                 })
-        .catch(err => { alert('Tarmoq xatosi! Internetingizni tekshiring.'); console.error(err); })
+                .catch(err => { alert('Tarmoq xatosi! Internetingizni tekshiring.'); console.error(err); })
                 .finally(() => {
                     submitBtn.innerHTML = 'Ro’yxatdan o’tish';
                     submitBtn.disabled = false;
@@ -1229,7 +1265,7 @@
             isDown = true;
             slider.style.cursor = 'grabbing';
             // Отключаем плавную привязку (snap) во время ручного перетаскивания
-            slider.style.scrollSnapType = 'none'; 
+            slider.style.scrollSnapType = 'none';
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
@@ -1256,4 +1292,5 @@
         });
     </script>
 </body>
+
 </html>

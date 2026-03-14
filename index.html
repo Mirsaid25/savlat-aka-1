@@ -1164,10 +1164,6 @@
         });
         phoneInput.addEventListener('focus', function () { if (this.value === '') this.value = '+998 ('; });
 
-        // Отправка данных в Telegram
-        const BOT_TOKEN = '8654798388:AAFoQd2chuMr-f0iZemEpgiVzX6_hKrAdQY';
-        const CHAT_ID = '-5120105540';
-
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const modal = document.getElementById('thankYouModal');
@@ -1202,10 +1198,10 @@
 📈 <b>SMM tajriba:</b> ${data.smmExperience}
             `;
 
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            fetch(`https://api.telegram.org/bot8654798388:AAFoQd2chuMr-f0iZemEpgiVzX6_hKrAdQY/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
+                body: JSON.stringify({ chat_id: '-1003775578581', text: text, parse_mode: 'HTML' })
             })
                 .then(res => res.json())
                 .then(resData => {
